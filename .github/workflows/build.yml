@@ -30,7 +30,7 @@ jobs:
             --hidden-import=importlib_metadata
 
       - name: Upload EXE
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v2
         with:
           name: ShangjianYinqing-EXE
           path: dist/app.exe
