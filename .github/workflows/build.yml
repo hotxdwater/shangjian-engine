@@ -28,7 +28,7 @@ jobs:
           pyinstaller app.py --noconfirm --onefile --icon=logo.ico --hidden-import=streamlit
 
       - name: Upload EXE
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@2c86e920a01cb60a6c48bd3772d8a592fdc6d9d
         with:
           name: ShangjianYinqing-EXE
           path: dist/app.exe
