@@ -30,5 +30,4 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: app
-          path: dist/*.exe
-        continue-on-error: false
+          path: dist/app.exe
