@@ -25,10 +25,10 @@ jobs:
 
       - name: Build EXE
         run: |
-          pyinstaller app.py --noconfirm --onefile --icon=logo.ico --hidden-import=streamlit
+          pyinstaller app.py --noconfirm --onefile --icon=logo.ico
 
-- name: Upload EXE
-  uses: actions/upload-artifact@v3
-  with:
-    name: ShangjianYinqing-EXE
-    path: dist/app.exe
+      - name: Upload EXE
+        uses: actions/upload-artifact@v3
+        with:
+          name: ShangjianYinqing-EXE
+          path: dist/app.exe
