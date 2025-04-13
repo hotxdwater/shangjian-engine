@@ -31,4 +31,4 @@ jobs:
       uses: actions/upload-artifact@v3
       with:
         name: ShangjianYinqing-EXE
-        path: dist/app.exe
+        path: ./dist/app.exe
