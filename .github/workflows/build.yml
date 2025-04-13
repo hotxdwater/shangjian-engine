@@ -24,10 +24,12 @@ jobs:
 
       - name: Build EXE
         run: |
-          pyinstaller app.py --noconfirm --onefile --icon=logo.ico --hidden-import=streamlit --hidden-import=altair --hidden-import=pandas --hidden-import=openpyxl --hidden-import=xlsxwriter
+          pyinstaller app.py --noconfirm --onefile --icon=logo.ico \
+          --hidden-import=streamlit --hidden-import=altair \
+          --hidden-import=pandas --hidden-import=openpyxl --hidden-import=xlsxwriter
 
-      - name: Upload EXE
-        uses: actions/upload-artifact@v2
+      - name: Upload EXE artifact
+        uses: actions/upload-artifact@3
         with:
           name: ShangjianYinqing-EXE
           path: dist/app.exe
