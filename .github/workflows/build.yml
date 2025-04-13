@@ -2,7 +2,7 @@ name: Build EXE on Windows
 
 on:
   push:
-    branches: [ main ]
+    branches: [main]
 
 jobs:
   build:
@@ -24,11 +24,10 @@ jobs:
           pip install pyinstaller
 
       - name: Build EXE
-        run: |
-          pyinstaller app.py --noconfirm --onefile --icon=logo.ico --hidden-import=streamlit
+        run: pyinstaller app.py --onefile --noconsole --clean
 
-      - name: Upload EXE
-        uses: actions/upload-artifact@2c86e920a01cb60a6c48bd3772d8a592fdc6d9d
+      - name: Upload EXE artifact
+        uses: actions/upload-artifact@v3
         with:
-          name: ShangjianYinqing-EXE
+          name: my-app
           path: dist/app.exe
