@@ -7,7 +7,6 @@ on:
 jobs:
   build:
     runs-on: windows-latest
-
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
@@ -25,10 +24,13 @@ jobs:
 
       - name: Build EXE
         run: |
-          pyinstaller app.py --noconfirm --onefile --icon=logo.ico --hidden-import=streamlit
+          pyinstaller app.py --noconfirm --onefile --icon=logo.ico ^
+            --hidden-import=streamlit ^
+            --hidden-import=importlib.metadata ^
+            --hidden-import=importlib_metadata
 
       - name: Upload EXE
-        uses: actions/upload-artifact@master
+        uses: actions/upload-artifact@v3
         with:
           name: ShangjianYinqing-EXE
           path: dist/app.exe
