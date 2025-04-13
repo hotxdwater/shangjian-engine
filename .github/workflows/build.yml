@@ -29,7 +29,7 @@ jobs:
           --hidden-import=pandas --hidden-import=openpyxl --hidden-import=xlsxwriter
 
       - name: Upload EXE artifact
-        uses: actions/upload-artifact@3
+        uses: actions/upload-artifact@v3
         with:
           name: ShangjianYinqing-EXE
           path: dist/app.exe
