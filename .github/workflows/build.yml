@@ -31,3 +31,4 @@ jobs:
         with:
           name: app
           path: dist/*.exe
+        continue-on-error: false
